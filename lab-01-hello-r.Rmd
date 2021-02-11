@@ -13,28 +13,15 @@ University ID: 2201001182
 library(tidyverse) 
 library(datasauRus)
 ```
-task1:
-```{r load-packages, message=FALSE}
- datasaurus_dozen %>% count(dataset) %>% print(13)
-```
-
-```{r load-packages, message=FALSE}
-  dino_data <- datasaurus_dozen %>%
-  filter(dataset == "dino")
-```
-
-```{r load-packages, message=FALSE}
-  ggplot(data = dino_data, mapping = aes(x = x, y = y)) + geom_point()
-> dino_data %>% summarize(r = cor(x, y))
-```
-
-```{r load-packages, message=FALSE}
-  dino_data %>% summarize(r = cor(x, y))
-```
-task2:
 
 ### Lab Exercise
+ task1
+ 
+```{r}
+  View(datasaurus_dozen)
+```
 
-(Type your answer to the Exercise here. Remember to include the code, you need to put the code between three backticks followed by the following line on top of the code {r load-packages, message=FALSE}. See 'Load Packages' above as an example. Delete everything in these brackets after typing your answer.)
+```{r}
+datasaurus_dozen %>% count(dataset) %>% print(13)
+```
 
-`
