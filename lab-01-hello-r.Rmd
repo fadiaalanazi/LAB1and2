@@ -25,6 +25,7 @@ library(datasauRus)
 datasaurus_dozen %>% count(dataset) %>% print(13)
 ```
 task2:
+
 ```{r}
 dino_data <- datasaurus_dozen %>%
  filter(dataset == "dino")
@@ -36,4 +37,14 @@ dino_data <- datasaurus_dozen %>%
 
 ```{r}
 dino_data %>% summarize(r = cor(x, y))
+```
+
+task3:
+```{r}
+star_data <- datasaurus_dozen %>%
+ filter(dataset == "star")
+```
+
+```{r}
+ggplot(data = star_data, mapping = aes(x = x, y = y)) + geom_point()
 ```
